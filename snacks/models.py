@@ -3,7 +3,7 @@ from django.db import models
 
 
 class Snack(models.Model):
-    name = models.CharField(primary_key=True, max_length=64)
+    name = models.CharField(max_length=64, primary_key=True)
     purchaser = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)
     description = models.TextField()
 
